@@ -1,0 +1,12 @@
+menuItem: WOGenericContainer {
+	align = align;
+	bgcolor = getColor;
+	elementName = "TD";
+	height = ^height;
+	valign = ^valign;
+	width = width;
+}
+
+parentContent: WOComponentContent {
+}
+

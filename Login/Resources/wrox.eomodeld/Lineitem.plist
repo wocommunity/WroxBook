@@ -1,0 +1,53 @@
+{
+    attributes = (
+        {
+            columnName = ITEMID; 
+            externalType = NUMBER; 
+            name = itemid; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = ORDERID; 
+            externalType = NUMBER; 
+            name = orderid; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = PRICE; 
+            externalType = NUMBER; 
+            name = price; 
+            precision = 14; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = QUANTITY; 
+            externalType = NUMBER; 
+            name = quantity; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (itemid, orderid, price, quantity); 
+    className = Lineitem; 
+    classProperties = (price, quantity, torder); 
+    externalName = TLINEITEM; 
+    fetchSpecificationDictionary = {}; 
+    name = Lineitem; 
+    primaryKeyAttributes = (orderid, itemid); 
+    relationships = (
+        {
+            destination = Order; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = orderid; sourceAttribute = orderid; }); 
+            name = torder; 
+        }
+    ); 
+}

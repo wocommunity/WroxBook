@@ -1,0 +1,64 @@
+{
+    attributes = (
+        {
+            columnName = categoryID; 
+            externalType = VARCHAR2; 
+            name = categoryID; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = parentID; 
+            externalType = VARCHAR2; 
+            name = parentID; 
+            readFormat = "( % P - 32 ) * 5 ) / 9"; 
+            valueClassName = NSString; 
+            width = 20; 
+            writeFormat = "(9 * % P ) / 5 +32"; 
+        }, 
+        {
+            columnName = theDescription; 
+            externalType = VARCHAR2; 
+            name = theDescription; 
+            valueClassName = NSString; 
+            width = 50; 
+        }
+    ); 
+    attributesUsedForLocking = (categoryID, parentID, theDescription); 
+    className = Category; 
+    classProperties = (theDescription, categoryID, parent, items, children, parentID); 
+    externalName = tCategory; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_clientClassPropertyNames = (theDescription, categoryID, parent); }; 
+    isReadOnly = Y; 
+    name = Category; 
+    primaryKeyAttributes = (categoryID); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = Category; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = parentID; sourceAttribute = categoryID; }); 
+            name = children; 
+            ownsDestination = Y; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = Item; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryID; sourceAttribute = categoryID; }); 
+            name = items; 
+            numberOfToManyFaultsToBatchFetch = 10; 
+        }, 
+        {
+            destination = Category; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryID; sourceAttribute = parentID; }); 
+            name = parent; 
+        }
+    ); 
+}

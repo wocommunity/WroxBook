@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>Layouts</key>
+	<dict>
+		<key>Default</key>
+		<dict>
+			<key>EntityOption</key>
+			<string>Primary Keys</string>
+			<key>RelationshipOption</key>
+			<string>Name</string>
+			<key>ViewPositions</key>
+			<dict>
+				<key>Address</key>
+				<array>
+					<string>42.000000</string>
+					<string>216.000000</string>
+					<string>129.000000</string>
+					<string>42.000000</string>
+				</array>
+				<key>Category</key>
+				<array>
+					<string>42.000000</string>
+					<string>440.000000</string>
+					<string>133.000000</string>
+					<string>42.000000</string>
+				</array>
+				<key>Customer</key>
+				<array>
+					<string>337.000000</string>
+					<string>234.000000</string>
+					<string>136.000000</string>
+					<string>42.000000</string>
+				</array>
+				<key>Item</key>
+				<array>
+					<string>-12.000000</string>
+					<string>374.000000</string>
+					<string>109.000000</string>
+					<string>42.000000</string>
+				</array>
+				<key>LineItem</key>
+				<array>
+					<string>-8.000000</string>
+					<string>284.000000</string>
+					<string>115.000000</string>
+					<string>60.000000</string>
+				</array>
+				<key>Order</key>
+				<array>
+					<string>308.000000</string>
+					<string>353.000000</string>
+					<string>115.000000</string>
+					<string>42.000000</string>
+				</array>
+				<key>Payment</key>
+				<array>
+					<string>350.000000</string>
+					<string>439.000000</string>
+					<string>133.000000</string>
+					<string>42.000000</string>
+				</array>
+			</dict>
+			<key>orthoLines</key>
+			<string>Y</string>
+		</dict>
+	</dict>
+	<key>Version</key>
+	<string>1</string>
+</dict>
+</plist>

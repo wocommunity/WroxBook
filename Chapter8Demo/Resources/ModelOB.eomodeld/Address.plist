@@ -1,0 +1,72 @@
+{
+    attributes = (
+        {
+            columnName = address; 
+            externalType = char; 
+            name = address; 
+            valueClassName = NSString; 
+            width = 75; 
+        }, 
+        {
+            columnName = addressID; 
+            externalType = int; 
+            name = addressID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = areaCode; 
+            externalType = char; 
+            name = areaCode; 
+            valueClassName = NSString; 
+            width = 15; 
+        }, 
+        {
+            columnName = city; 
+            externalType = char; 
+            name = city; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = complement; 
+            externalType = char; 
+            name = complement; 
+            valueClassName = NSString; 
+            width = 75; 
+        }, 
+        {
+            columnName = country; 
+            externalType = char; 
+            name = country; 
+            valueClassName = NSString; 
+            width = 30; 
+        }, 
+        {
+            columnName = stateProvince; 
+            externalType = char; 
+            name = stateProvince; 
+            valueClassName = NSString; 
+            width = 20; 
+        }
+    ); 
+    attributesUsedForLocking = (addressID, address, complement, city, stateProvince, areaCode, country); 
+    className = Address; 
+    classProperties = (address, complement, city, stateProvince, areaCode, country, customers); 
+    externalName = tAddress; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (address, complement, city, stateProvince, areaCode, country); 
+    }; 
+    name = Address; 
+    primaryKeyAttributes = (addressID); 
+    relationships = (
+        {
+            destination = Customer; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = addressID; sourceAttribute = addressID; }); 
+            name = customers; 
+        }
+    ); 
+}

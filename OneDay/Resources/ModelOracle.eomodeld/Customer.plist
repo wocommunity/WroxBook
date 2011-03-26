@@ -1,0 +1,135 @@
+{
+    attributes = (
+        {
+            columnName = addressID; 
+            externalType = number; 
+            name = addressID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = alternateTelephone; 
+            externalType = VARCHAR2; 
+            name = alternateTelephone; 
+            valueClassName = NSString; 
+        }, 
+        {
+            columnName = customerID; 
+            externalType = VArchar2; 
+            name = customerID; 
+            valueClassName = NSString; 
+        }, 
+        {
+            columnName = email; 
+            externalType = VARCHAR2; 
+            name = email; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = firstName; 
+            externalType = VARCHAR2; 
+            name = firstName; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = lastName; 
+            externalType = VARCHAR2; 
+            name = lastName; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = loginName; 
+            externalType = VARCHAR2; 
+            name = loginName; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            adaptorValueConversionMethodName = encryptedPassword; 
+            columnName = password; 
+            externalType = VARCHAR2; 
+            factoryMethodArgumentType = EOFactoryMethodArgumentIsNSString; 
+            name = password; 
+            valueClassName = PrivateInformation; 
+            valueFactoryMethodName = "decryptString:"; 
+            width = 20; 
+        }, 
+        {
+            columnName = telephone; 
+            externalType = VARCHAR2; 
+            name = telephone; 
+            valueClassName = NSString; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = title; 
+            externalType = VARCHAR2; 
+            name = title; 
+            valueClassName = NSString; 
+            width = 4; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        customerID, 
+        title, 
+        firstName, 
+        lastName, 
+        email, 
+        loginName, 
+        password, 
+        telephone, 
+        alternateTelephone, 
+        addressID
+    ); 
+    className = Customer; 
+    classProperties = (
+        title, 
+        firstName, 
+        lastName, 
+        email, 
+        loginName, 
+        password, 
+        telephone, 
+        alternateTelephone, 
+        address, 
+        orders
+    ); 
+    externalName = tCustomer; 
+    internalInfo = {
+        _clientClassPropertyNames = (
+            title, 
+            firstName, 
+            lastName, 
+            email, 
+            loginName, 
+            password, 
+            telephone, 
+            alternateTelephone
+        ); 
+    }; 
+    name = Customer; 
+    primaryKeyAttributes = (customerID); 
+    relationships = (
+        {
+            destination = Address; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = addressID; sourceAttribute = addressID; }); 
+            name = address; 
+        }, 
+        {
+            deleteRule = EODeleteRuleDeny; 
+            destination = Order; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = customerID; sourceAttribute = customerID; }); 
+            name = orders; 
+            ownsDestination = Y; 
+        }
+    ); 
+}

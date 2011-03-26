@@ -1,0 +1,36 @@
+Conditional1: WOConditional {
+	condition = showResults;
+}
+
+Conditional2: WOConditional {
+	condition = noResults;
+}
+
+Form1: WOForm {
+}
+
+Repetition1: WORepetition {
+	item = customer;
+	list = customers;
+}
+
+String1: WOString {
+	value = customer.firstName;
+}
+
+String2: WOString {
+	value = customer.lastName;
+}
+
+String3: WOString {
+	value = customer.email;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = searchForCustomers;
+	value = "Search";
+}
+
+TextField1: WOTextField {
+	value = queryBindings.lastNameValue;
+}

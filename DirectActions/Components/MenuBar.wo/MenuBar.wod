@@ -1,0 +1,75 @@
+emptyCell : MenuElement {
+  area = "none";
+  align = ^itemalign;
+  valign = ^itemvalign;
+  width = ^itemwidth;
+  height = ^itemheight;
+  background = ^background;
+  highlight = ^highlight;
+}
+
+books: MenuElement {
+  area = "Books";
+  align = ^itemalign;
+  valign = ^itemvalign;
+  width = ^itemwidth;
+  height = ^itemheight;
+  background = ^background;
+  highlight = ^highlight;
+}
+
+music: MenuElement {
+  area ="Music";
+  align=^itemalign;
+  valign=^itemvalign;
+  width=^itemwidth;
+  height=^itemheight;
+  background=^background;
+  highlight=^highlight;
+}
+
+electronics: MenuElement {
+  area ="Electronics";
+  align=^itemalign;
+  valign=^itemvalign;
+  width=^itemwidth;
+  height=^itemheight;
+  background=^background;
+  highlight=^highlight;
+}
+
+checkout: MenuElement {
+  area ="Checkout";
+  align=^itemalign;
+  valign=^itemvalign;
+  width=^itemwidth;
+  height=^itemheight;
+  background=^background;
+  highlight=^highlight;
+}
+
+booksLink: WOHyperlink {
+  directActionName="BooksTop";
+}
+
+musicLink: WOHyperlink {
+  directActionName="MusicTop";
+}
+
+electronicsLink: WOHyperlink {
+  directActionName="ElectronicsTop";
+}
+
+checkoutLink: WOHyperlink {
+  directActionName="Checkout";
+}
+
+menuTable : WOGenericContainer {
+  elementName = "TABLE";
+  bgcolor = ^bgcolor;
+  width = ^width;
+  height = ^height;
+  cellpadding = ^cellpadding;
+  cellspacing = ^cellspacing;
+  align = ^align;
+}

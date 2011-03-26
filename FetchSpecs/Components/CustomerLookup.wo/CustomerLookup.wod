@@ -1,0 +1,67 @@
+Conditional1: WOConditional {
+	condition = noResults;
+}
+
+Conditional2: WOConditional {
+	condition = showDetails;
+}
+
+Conditional3: WOConditional {
+	condition = foundResults;
+}
+
+Form1: WOForm {
+}
+
+Form2: WOForm {
+}
+
+Hyperlink1: WOHyperlink {
+	action = viewDetails;
+}
+
+Repetition1: WORepetition {
+	item = customer;
+	list = customerList;
+}
+
+String1: WOString {
+	value = customer.firstName;
+}
+
+String2: WOString {
+	value = customer.lastName;
+}
+
+String3: WOString {
+	value = customer.firstName;
+}
+
+String4: WOString {
+	value = customer.lastName;
+}
+
+String5: WOString {
+	value = customer.email;
+}
+
+String6: WOString {
+	value = customer.address.city;
+}
+
+String7: WOString {
+	value = customer.address.stateProvince;
+}
+
+String8: WOString {
+	value = customer.address.country;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = lookUpCustomer;
+	value = "Search";
+}
+
+TextField1: WOTextField {
+	value = customerName2Find;
+}

@@ -1,0 +1,16 @@
+Hyperlink1: WOHyperlink {
+	pageName = "Main";
+}
+
+Repetition2: WORepetition {
+	item = tempUserName;
+	list = session.pastUserNames;
+}
+
+String1: WOString {
+	value = userName;
+}
+
+String2: WOString {
+	value = tempUserName;
+}

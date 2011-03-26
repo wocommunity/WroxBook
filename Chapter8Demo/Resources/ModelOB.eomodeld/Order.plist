@@ -1,0 +1,69 @@
+{
+    attributes = (
+        {
+            columnName = customerID; 
+            externalType = int; 
+            name = customerID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = theDate; 
+            externalType = date; 
+            name = date; 
+            valueClassName = NSCalendarDate; 
+        }, 
+        {
+            columnName = orderID; 
+            externalType = int; 
+            name = orderID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = paymentID; 
+            externalType = int; 
+            name = paymentID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (orderID, paymentID, customerID, date); 
+    className = Order; 
+    classProperties = (date, payment, customer, lineItems); 
+    externalName = tOrder; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {"_clientClassPropertyNames" = (date, payment, customer); }; 
+    name = Order; 
+    primaryKeyAttributes = (orderID); 
+    relationships = (
+        {
+            destination = Customer; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = customerID; sourceAttribute = customerID; }); 
+            name = customer; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = LineItem; 
+            isMandatory = Y; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = orderID; sourceAttribute = orderID; }); 
+            name = lineItems; 
+            ownsDestination = Y; 
+            propagatesPrimaryKey = Y; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = Payment; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = paymentID; sourceAttribute = paymentID; }); 
+            name = payment; 
+        }
+    ); 
+}

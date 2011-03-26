@@ -1,0 +1,78 @@
+{
+    "Fetch Spec1" = {
+        class = EOFetchSpecification; 
+        entityName = Customer; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = email; 
+                    selectorName = "isLike:"; 
+                    value = {_key = email; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = firstName; 
+                    selectorName = "isLike:"; 
+                    value = {_key = firstName; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = address.country; 
+                    selectorName = "isLike:"; 
+                    value = {_key = country; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = address.city; 
+                    selectorName = "isLike:"; 
+                    value = {_key = city; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+    genericFetchSpec = {
+        class = EOFetchSpecification; 
+        entityName = Customer; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = firstName; 
+                    selectorName = "isLike:"; 
+                    value = {_key = firstName; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = lastName; 
+                    selectorName = "isLike:"; 
+                    value = {_key = lastName; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = email; 
+                    selectorName = "isLike:"; 
+                    value = {_key = eMail; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyComparisonQualifier; 
+                    leftKey = address.country; 
+                    rightKey = country; 
+                    selectorName = "isLike:"; 
+                }, 
+                {
+                    class = EOKeyComparisonQualifier; 
+                    leftKey = address.city; 
+                    rightKey = city; 
+                    selectorName = "isLike:"; 
+                }
+            ); 
+        }; 
+    }; 
+}

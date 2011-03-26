@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <meta name = "generator" content = "WebObjects 5" />
+    <title>Untitled</title>
+  </head>
+  <body bgcolor = "#FFFFFF">
+    Please enter your search criterias below. The more you specify, the more precise the result will be.<p />
+    <webobject name = "Form1">
+      <table border = "0" width = "100%">
+        <tr>
+          <td>Last name</td>
+          <td><webobject name = "TextField5" /></td>
+        </tr>
+        <tr>
+          <td>First name</td>
+          <td><webobject name = "TextField4" /></td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td><webobject name = "TextField3" /></td>
+        </tr>
+        <tr>
+          <td>Country</td>
+          <td><webobject name = "TextField2" /></td>
+        </tr>
+        <tr>
+          <td>E-Mail</td>
+          <td><webobject name = "TextField1" /></td>
+        </tr>
+      </table>
+      <p>
+        <webobject name = "SubmitButton1" />
+        <webobject name = "ResetButton1" />
+      </p>
+    </webobject>
+    <hr />
+    <webobject name = "Conditional2">The above query results in the following customer<br />
+      <br />
+      <table border = "1">
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Address</th>
+          <th>E-Mail</th>
+          <th>City</th>
+        </tr>
+        <webobject name = "Repetition1">
+          <tr>
+            <td><webobject name = "String1" /></td>
+            <td><webobject name = "String2" /></td>
+            <td><webobject name = "String3" /></td>
+            <td><webobject name = "String4" /></td>
+            <td><webobject name = "String5" /></td>
+          </tr>
+        </webobject>
+        <caption>Caption</caption>
+      </table>
+    </webobject>
+    <webobject name = "Conditional1">Please fill in search criterias. There are no results for the current shown search values.</webobject>
+  </body>
+</html>

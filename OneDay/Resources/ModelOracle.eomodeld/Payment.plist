@@ -1,0 +1,81 @@
+{
+    attributes = (
+        {
+            columnName = amount; 
+            externalType = number; 
+            name = amount; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = creditCardExpiryDate; 
+            externalType = VARCHAR2; 
+            name = creditCardExpiryDate; 
+            valueClassName = NSString; 
+            width = 7; 
+        }, 
+        {
+            columnName = creditCardName; 
+            externalType = VARCHAR2; 
+            name = creditCardName; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            adaptorValueConversionMethodName = encryptString; 
+            columnName = creditCardNumber; 
+            externalType = VARCHAR2; 
+            factoryMethodArgumentType = EOFactoryMethodArgumentIsNSString; 
+            name = creditCardNumber; 
+            valueClassName = PrivateInformation; 
+            valueFactoryMethodName = "decryptString:"; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = datePaid; 
+            externalType = DATE; 
+            name = datePaid; 
+            valueClassName = NSCalendarDate; 
+        }, 
+        {
+            columnName = paymentID; 
+            externalType = number; 
+            name = paymentID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = type; 
+            externalType = VARCHAR2; 
+            name = type; 
+            valueClassName = NSString; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        paymentID, 
+        amount, 
+        creditCardNumber, 
+        creditCardExpiryDate, 
+        type, 
+        creditCardName, 
+        datePaid
+    ); 
+    className = Payment; 
+    classProperties = (
+        amount, 
+        creditCardNumber, 
+        creditCardExpiryDate, 
+        type, 
+        creditCardName, 
+        datePaid
+    ); 
+    externalName = tPayment; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (amount, creditCardNumber, creditCardExpiryDate, type, creditCardName); 
+    }; 
+    name = Payment; 
+    primaryKeyAttributes = (paymentID); 
+}

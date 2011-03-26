@@ -1,0 +1,33 @@
+{
+    attributes = (
+        {
+            columnName = ""; 
+            externalType = int; 
+            name = artificialKey; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = ""; 
+            externalType = double; 
+            name = currency; 
+            precision = 14; 
+            scale = 2; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = ""; 
+            externalType = char; 
+            name = telephone; 
+            valueClassName = NSString; 
+            width = 20; 
+        }
+    ); 
+    attributesUsedForLocking = (artificialKey, currency, telephone); 
+    className = EOGenericRecord; 
+    classProperties = (currency, telephone); 
+    fetchSpecificationDictionary = {}; 
+    name = EOPrototypes; 
+    primaryKeyAttributes = (artificialKey); 
+}

@@ -1,0 +1,64 @@
+{
+    attributes = (
+        {
+            columnName = categoryID; 
+            externalType = char; 
+            name = categoryID; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {columnName = itemID; name = itemID; prototypeName = artificialKey; }, 
+        {
+            columnName = quantityInStock; 
+            externalType = int; 
+            name = quantityInStock; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {columnName = retailPrice; name = retailPrice; prototypeName = currency; }, 
+        {columnName = storePrice; name = storePrice; prototypeName = currency; }, 
+        {
+            columnName = theDescription; 
+            externalType = char; 
+            name = theDescription; 
+            valueClassName = NSString; 
+            width = 200; 
+        }, 
+        {
+            columnName = title; 
+            externalType = char; 
+            name = title; 
+            valueClassName = NSString; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        categoryID, 
+        itemID, 
+        quantityInStock, 
+        retailPrice, 
+        storePrice, 
+        theDescription, 
+        title
+    ); 
+    className = EOGenericRecord; 
+    classProperties = (title, theDescription, retailPrice, storePrice, quantityInStock, category); 
+    externalName = tItem; 
+    internalInfo = {
+        _clientClassPropertyNames = (title, theDescription, retailPrice, storePrice, quantityInStock, category); 
+    }; 
+    maxNumberOfInstancesToBatchFetch = 5; 
+    name = Item; 
+    primaryKeyAttributes = (itemID); 
+    relationships = (
+        {
+            destination = Category; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryID; sourceAttribute = categoryID; }); 
+            name = category; 
+        }
+    ); 
+    sharedObjectFetchSpecificationNames = ("Fetch Spec"); 
+}

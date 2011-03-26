@@ -1,0 +1,13 @@
+Form1: WOForm {
+}
+
+PageWrapper1: PageWrapper {
+}
+
+SubmitButton1: WOSubmitButton {
+	action = submitName;
+}
+
+TextField1: WOTextField {
+	value = userName;
+}

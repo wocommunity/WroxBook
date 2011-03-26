@@ -1,0 +1,10 @@
+NameEntryForm: WOForm {
+}
+
+NameSubmitButton2: WOSubmitButton {
+	action = submitName;
+}
+
+UserNameTextField2: WOTextField {
+	value = userName;
+}

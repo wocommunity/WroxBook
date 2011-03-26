@@ -1,0 +1,11 @@
+ComponentContent1: WOComponentContent {
+}
+
+Repetition1: WORepetition {
+	item = tempUserName;
+	list = session.pastUserNames;
+}
+
+String1: WOString {
+	value = tempUserName;
+}

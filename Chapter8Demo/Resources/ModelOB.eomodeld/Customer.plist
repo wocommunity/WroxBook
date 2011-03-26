@@ -1,0 +1,134 @@
+{
+    attributes = (
+        {
+            columnName = addressID; 
+            externalType = int; 
+            name = addressID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = alternateTelephone; 
+            externalType = char; 
+            name = alternateTelephone; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = customerID; 
+            externalType = int; 
+            name = customerID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = email; 
+            externalType = char; 
+            name = email; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = firstName; 
+            externalType = char; 
+            name = firstName; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = lastName; 
+            externalType = char; 
+            name = lastName; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = loginName; 
+            externalType = char; 
+            name = loginName; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = password; 
+            externalType = char; 
+            name = password; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = telephone; 
+            externalType = char; 
+            name = telephone; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = title; 
+            externalType = char; 
+            name = title; 
+            valueClassName = NSString; 
+            width = 4; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        customerID, 
+        title, 
+        firstName, 
+        lastName, 
+        email, 
+        loginName, 
+        password, 
+        telephone, 
+        alternateTelephone, 
+        addressID
+    ); 
+    className = Customer; 
+    classProperties = (
+        title, 
+        firstName, 
+        lastName, 
+        email, 
+        loginName, 
+        password, 
+        telephone, 
+        alternateTelephone, 
+        orders, 
+        address
+    ); 
+    externalName = tCustomer; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (
+            title, 
+            firstName, 
+            lastName, 
+            email, 
+            loginName, 
+            password, 
+            telephone, 
+            alternateTelephone
+        ); 
+    }; 
+    name = Customer; 
+    primaryKeyAttributes = (customerID); 
+    relationships = (
+        {
+            destination = Address; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = addressID; sourceAttribute = addressID; }); 
+            name = address; 
+        }, 
+        {
+            deleteRule = EODeleteRuleDeny; 
+            destination = Order; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = customerID; sourceAttribute = customerID; }); 
+            name = orders; 
+            ownsDestination = Y; 
+        }
+    ); 
+}

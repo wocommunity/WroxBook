@@ -1,0 +1,53 @@
+{
+    attributes = (
+        {columnName = customerID; name = customerID; prototypeName = artificialKey; }, 
+        {columnName = orderID; name = orderID; prototypeName = artificialKey; }, 
+        {columnName = paymentID; name = paymentID; prototypeName = artificialKey; }, 
+        {
+            columnName = theDate; 
+            externalType = date; 
+            name = theDate; 
+            valueClassName = NSCalendarDate; 
+        }
+    ); 
+    attributesUsedForLocking = (orderID, paymentID, customerID, theDate); 
+    className = EOGenericRecord; 
+    classProperties = (theDate, payment, customer, lineItems); 
+    externalName = tOrder; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_clientClassPropertyNames = (date, payment, customer); }; 
+    maxNumberOfInstancesToBatchFetch = 2; 
+    name = Order; 
+    primaryKeyAttributes = (orderID); 
+    relationships = (
+        {
+            destination = Customer; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = customerID; sourceAttribute = customerID; }); 
+            name = customer; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = LineItem; 
+            isMandatory = Y; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = orderID; sourceAttribute = orderID; }); 
+            name = lineItems; 
+            numberOfToManyFaultsToBatchFetch = 2; 
+            ownsDestination = Y; 
+            propagatesPrimaryKey = Y; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = Payment; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = paymentID; sourceAttribute = paymentID; }); 
+            name = payment; 
+        }
+    ); 
+}

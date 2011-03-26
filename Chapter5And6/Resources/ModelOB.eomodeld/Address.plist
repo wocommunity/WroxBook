@@ -1,0 +1,60 @@
+{
+    attributes = (
+        {
+            columnName = address; 
+            externalType = char; 
+            name = address; 
+            valueClassName = NSString; 
+            width = 75; 
+        }, 
+        {columnName = addressID; name = addressID; prototypeName = artificialKey; }, 
+        {
+            columnName = areaCode; 
+            externalType = char; 
+            name = areaCode; 
+            valueClassName = NSString; 
+            width = 15; 
+        }, 
+        {
+            columnName = city; 
+            externalType = char; 
+            name = city; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = country; 
+            externalType = char; 
+            name = country; 
+            valueClassName = NSString; 
+            width = 30; 
+        }, 
+        {
+            columnName = stateProvince; 
+            externalType = char; 
+            name = stateProvince; 
+            valueClassName = NSString; 
+            width = 20; 
+        }
+    ); 
+    attributesUsedForLocking = (addressID, address, city, stateProvince, areaCode, country); 
+    className = EOGenericRecord; 
+    classProperties = (address, city, stateProvince, areaCode, country, customer); 
+    externalName = tAddress; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (address, complement, city, stateProvince, areaCode, country, customer); 
+    }; 
+    name = Address; 
+    primaryKeyAttributes = (addressID); 
+    relationships = (
+        {
+            destination = Customer; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = customerID; sourceAttribute = addressID; }); 
+            name = customer; 
+        }
+    ); 
+}

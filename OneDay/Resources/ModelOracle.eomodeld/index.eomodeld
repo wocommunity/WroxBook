@@ -1,0 +1,114 @@
+{
+    EOModelVersion = 2.1; 
+    adaptorName = JDBC; 
+    connectionDictionary = {
+        URL = "jdbc:oracle:thin:@192.168.1.130:1521:hopefully"; 
+        driver = ""; 
+        jdbc2Info = {
+            ANSI92_CONFORMANCE = ANSI92EntryLevel; 
+            DBMS_NAME = Oracle; 
+            DRIVER_NAME = "Oracle JDBC driver"; 
+            DRIVER_VER = 8.1.6.0.0; 
+            IDENTIFIER_QUOTE_STRING = "\""; 
+            NON_NULLABLE_COLUMNS = T; 
+            STRING_FUNCTIONS = "CHR, INITCAP, LOWER, LPAD, LTRIM, NLS,_INITCAP, NLS,_LOWER, NLS,_UPPER, REPLACE, RPAD, RTRIM, SOUNDEX, SUBSTR, SUBSTRB, TRANSLATE, UPPER, ASCII, INSTR, INSTRB, LENGTH, LENGTHB, NLSSORT, CHARTOROWID, CONVERT, HEXTORAW, RAWTOHEX, ROWIDTOCHAR, TO_CHAR, TO_DATE, TO_LABEL, TO_MULTI_BYTE, TO_NUMBER, TO_SINGLE_BYTE"; 
+            typeInfo = {
+                CHAR = {
+                    createParams = 1; 
+                    defaultJDBCType = (CHAR); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 255; 
+                }; 
+                DATE = {
+                    createParams = 0; 
+                    defaultJDBCType = (TIMESTAMP); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 7; 
+                }; 
+                FLOAT = {
+                    createParams = 0; 
+                    defaultJDBCType = (FLOAT); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 127; 
+                    minScale = "-84"; 
+                    precision = 63; 
+                }; 
+                LONG = {
+                    createParams = 0; 
+                    defaultJDBCType = ("LONG VARCHAR"); 
+                    isNullable = T; 
+                    isSearchable = F; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 134217727; 
+                }; 
+                "LONG RAW" = {
+                    createParams = 0; 
+                    defaultJDBCType = ("LONG VARBINARY"); 
+                    isNullable = T; 
+                    isSearchable = F; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 134217727; 
+                }; 
+                NUMBER = {
+                    createParams = 2; 
+                    defaultJDBCType = (BIT, TINYINT, BIGINT, NUMERIC, INTEGER, SMALLINT); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 127; 
+                    minScale = "-84"; 
+                    precision = 38; 
+                }; 
+                RAW = {
+                    createParams = 1; 
+                    defaultJDBCType = (VARBINARY); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 255; 
+                }; 
+                REAL = {
+                    createParams = 0; 
+                    defaultJDBCType = (REAL); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 127; 
+                    minScale = "-84"; 
+                    precision = 63; 
+                }; 
+                VARCHAR2 = {
+                    createParams = 1; 
+                    defaultJDBCType = (VARCHAR); 
+                    isNullable = T; 
+                    isSearchable = T; 
+                    maxScale = 0; 
+                    minScale = 0; 
+                    precision = 2000; 
+                }; 
+            }; 
+        }; 
+        password = mac; 
+        plugin = ""; 
+        username = apple; 
+    }; 
+    entities = (
+        {className = Address; name = Address; }, 
+        {className = Category; name = Category; }, 
+        {className = Customer; name = Customer; }, 
+        {className = Item; name = Item; }, 
+        {className = LineItem; name = LineItem; }, 
+        {className = Order; name = Order; }, 
+        {className = Payment; name = Payment; }
+    ); 
+    internalInfo = {_deletedEntityNamesInObjectStore = (test); }; 
+    storedProcedures = (applyDiscount, volume); 
+}

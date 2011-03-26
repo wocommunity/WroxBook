@@ -1,0 +1,32 @@
+{
+    arguments = (
+        {
+            allowsNull = Y; 
+            columnName = 2; 
+            externalType = DATE; 
+            name = endDate; 
+            parameterDirection = 1; 
+            valueClassName = NSCalendarDate; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = 0; 
+            externalType = NUMBER; 
+            name = sales; 
+            parameterDirection = 2; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = 1; 
+            externalType = DATE; 
+            name = startDate; 
+            parameterDirection = 1; 
+            valueClassName = NSCalendarDate; 
+        }
+    ); 
+    externalName = VOLUME; 
+    name = volume; 
+}

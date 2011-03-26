@@ -1,0 +1,78 @@
+{
+    attributes = (
+        {
+            columnName = categoryID; 
+            externalType = char; 
+            name = categoryID; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = itemID; 
+            externalType = int; 
+            name = itemID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = quantityInStock; 
+            externalType = int; 
+            name = quantityInStock; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = retailPrice; 
+            externalType = double; 
+            name = retailPrice; 
+            precision = 38; 
+            scale = 2; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = storePrice; 
+            externalType = double; 
+            name = storePrice; 
+            precision = 38; 
+            scale = 2; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = theDescription; 
+            externalType = char; 
+            name = theDescription; 
+            valueClassName = NSString; 
+            width = 200; 
+        }, 
+        {
+            columnName = title; 
+            externalType = char; 
+            name = title; 
+            valueClassName = NSString; 
+            width = 40; 
+        }
+    ); 
+    className = Item; 
+    classProperties = (title, theDescription, retailPrice, storePrice, quantityInStock, category); 
+    externalName = tItem; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (title, theDescription, retailPrice, storePrice, quantityInStock, category); 
+    }; 
+    isReadOnly = Y; 
+    maxNumberOfInstancesToBatchFetch = 5; 
+    name = Item; 
+    primaryKeyAttributes = (itemID); 
+    relationships = (
+        {
+            destination = Category; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryID; sourceAttribute = categoryID; }); 
+            name = category; 
+        }
+    ); 
+    sharedObjectFetchSpecificationNames = (FetchSpec); 
+}

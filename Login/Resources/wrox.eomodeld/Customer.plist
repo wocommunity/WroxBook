@@ -1,0 +1,124 @@
+{
+    attributes = (
+        {
+            columnName = ADDRESSID; 
+            externalType = NUMBER; 
+            name = addressid; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = ALTERNATETELEPHONE; 
+            externalType = VARCHAR2; 
+            name = alternatetelephone; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = CUSTOMERID; 
+            externalType = NUMBER; 
+            name = customerid; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = EMAIL; 
+            externalType = VARCHAR2; 
+            name = email; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = FIRSTNAME; 
+            externalType = VARCHAR2; 
+            name = firstname; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = LASTNAME; 
+            externalType = VARCHAR2; 
+            name = lastname; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = LOGINNAME; 
+            externalType = VARCHAR2; 
+            name = loginname; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = PASSWORD; 
+            externalType = VARCHAR2; 
+            name = password; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = TELEPHONE; 
+            externalType = VARCHAR2; 
+            name = telephone; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = TITLE; 
+            externalType = VARCHAR2; 
+            name = title; 
+            valueClassName = NSString; 
+            width = 4; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        addressid, 
+        alternatetelephone, 
+        customerid, 
+        email, 
+        firstname, 
+        lastname, 
+        loginname, 
+        password, 
+        telephone, 
+        title
+    ); 
+    className = Customer; 
+    classProperties = (
+        addressid, 
+        alternatetelephone, 
+        email, 
+        firstname, 
+        lastname, 
+        loginname, 
+        password, 
+        telephone, 
+        title, 
+        taddress, 
+        torders
+    ); 
+    externalName = TCUSTOMER; 
+    fetchSpecificationDictionary = {}; 
+    name = Customer; 
+    primaryKeyAttributes = (customerid); 
+    relationships = (
+        {
+            destination = Address; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = addressid; sourceAttribute = addressid; }); 
+            name = taddress; 
+        }, 
+        {
+            destination = Order; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = customerid; sourceAttribute = customerid; }); 
+            name = torders; 
+        }
+    ); 
+}

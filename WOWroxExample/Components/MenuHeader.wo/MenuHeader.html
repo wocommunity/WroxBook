@@ -1,0 +1,55 @@
+<webobject name = "EntitiesForm">
+  <center>
+    <table border = "1" bgcolor = "D0D0D0" cellpadding = "4" cellspacing = "0">
+      <tr>
+        <webobject name = "HasValidSession">
+          <td>
+            <table border = "0" bgcolor = "D0D0D0" cellpadding = "3" cellspacing = "0">
+              <tr valign = "middle">
+                <td align = "left" valign = "middle">
+                  <b>Entities:</b>
+                  <br />
+                  <webobject name = "EntitiesPopup" />
+                </td>
+                <td align = "left"> <webobject name = "FindButton" /> </td>
+                <td align = "left"><webobject name = "NewButton" /></td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table border = "0" bgcolor = "D0D0D0" cellpadding = "3" cellspacing = "0">
+              <tr valign = "middle">
+                <td align = "center" valign = "middle">
+                  <webobject name = "HomeLink"><webobject name = "HomeButton" /></webobject>
+                </td>
+                <td align = "center" valign = "middle">
+                  <webobject name = "LoginLink"><webobject name = "LoginButton" /></webobject>
+                </td>
+                <webobject name = "AssistantActiveConditional">
+                  <td align = "center">
+                    <webobject name = "ShowAssistantLink"><webobject name = "ShowAssistantButton" /></webobject>
+                  </td>
+                </webobject>
+                <td align = "right" valign = "middle">
+                  <webobject name = "D2WLink2"><webobject name = "D2WLogo2" /></webobject>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </webobject>
+        <webobject name = "NoValidSession">
+          <td>
+            <table border = "0" bgcolor = "D0D0D0" cellpadding = "3" cellspacing = "0">
+              <tr valign = "middle">
+                <td align = "right" valign = "middle">
+                  <webobject name = "D2WLink"><webobject name = "D2WLogo" /></webobject>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </webobject>
+      </tr>
+    </table>
+  </center>
+</webobject>
+<webobject name = "RemoteControl" />

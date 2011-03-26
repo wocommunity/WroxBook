@@ -1,0 +1,10 @@
+Hyperlink1: WOHyperlink {
+	pageName = "Main";
+}
+
+PageWrapper1: PageWrapper {
+}
+
+String1: WOString {
+	value = userName;
+}

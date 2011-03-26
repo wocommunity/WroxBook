@@ -1,0 +1,63 @@
+Conditional1: WOConditional {
+	condition = resultsAvailable;
+	negate = true;
+}
+
+Conditional2: WOConditional {
+	condition = resultsAvailable;
+}
+
+Form1: WOForm {
+}
+
+Repetition1: WORepetition {
+	item = currentCustomer;
+	list = customerList;
+}
+
+ResetButton1: WOResetButton {
+}
+
+String1: WOString {
+	value = currentCustomer.firstName;
+}
+
+String2: WOString {
+	value = currentCustomer.lastName;
+}
+
+String3: WOString {
+	value = currentCustomer.address.address;
+}
+
+String4: WOString {
+	value = currentCustomer.email;
+}
+
+String5: WOString {
+	value = currentCustomer.address.city;
+}
+
+SubmitButton1: WOSubmitButton {
+	action = submitValues;
+}
+
+TextField1: WOTextField {
+	value = queryBindings.eMail;
+}
+
+TextField2: WOTextField {
+	value = queryBindings.country;
+}
+
+TextField3: WOTextField {
+	value = queryBindings.city;
+}
+
+TextField4: WOTextField {
+	value = queryBindings.firstName;
+}
+
+TextField5: WOTextField {
+	value = queryBindings.lastName;
+}

@@ -1,0 +1,61 @@
+{
+    attributes = (
+        {
+            columnName = itemID; 
+            externalType = int; 
+            name = itemID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = orderID; 
+            externalType = int; 
+            name = orderID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = price; 
+            externalType = double; 
+            internalInfo = {_nameInObjectStore = retailPrice; }; 
+            name = price; 
+            precision = 38; 
+            scale = 2; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = quantity; 
+            externalType = int; 
+            name = quantity; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (orderID, itemID, quantity, price); 
+    className = LineItem; 
+    classProperties = (quantity, item, order, price); 
+    externalName = tLineItem; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_clientClassPropertyNames = (quantity, item, order); }; 
+    name = LineItem; 
+    primaryKeyAttributes = (orderID, itemID); 
+    relationships = (
+        {
+            destination = Item; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = itemID; sourceAttribute = itemID; }); 
+            name = item; 
+        }, 
+        {
+            destination = Order; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = orderID; sourceAttribute = orderID; }); 
+            name = order; 
+        }
+    ); 
+}

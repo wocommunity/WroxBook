@@ -1,0 +1,69 @@
+{
+    attributes = (
+        {
+            columnName = customerID; 
+            externalType = number; 
+            name = customerID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = orderID; 
+            externalType = number; 
+            name = orderID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = paymentID; 
+            externalType = NUMBER; 
+            name = paymentID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = theDate; 
+            externalType = DATE; 
+            name = theDate; 
+            valueClassName = NSCalendarDate; 
+        }
+    ); 
+    attributesUsedForLocking = (orderID, customerID, theDate, paymentID); 
+    className = Order; 
+    classProperties = (theDate, customer, payment, lineItems); 
+    externalName = tOrder; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_clientClassPropertyNames = (date, payment, customer); }; 
+    name = Order; 
+    primaryKeyAttributes = (orderID); 
+    relationships = (
+        {
+            destination = Customer; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = customerID; sourceAttribute = customerID; }); 
+            name = customer; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = LineItem; 
+            isMandatory = Y; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = orderID; sourceAttribute = orderID; }); 
+            name = lineItems; 
+            ownsDestination = Y; 
+            propagatesPrimaryKey = Y; 
+        }, 
+        {
+            destination = Payment; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = paymentID; sourceAttribute = paymentID; }); 
+            name = payment; 
+            ownsDestination = Y; 
+        }
+    ); 
+}

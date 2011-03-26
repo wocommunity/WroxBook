@@ -1,0 +1,17 @@
+form: WOForm {
+}
+
+login:WOSubmitButton {
+  action=login;
+  value="Login";
+}
+
+password: WOPasswordField {
+  value=password;
+}
+
+username: WOTextField {
+  value=username;
+}
+
+

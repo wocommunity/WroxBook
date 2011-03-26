@@ -1,0 +1,18 @@
+{
+    arguments = (
+        {
+            allowsNull = Y; 
+            columnName = discount; 
+            externalType = NUMBER; 
+            internalInfo = {_nameInObjectStore = 0; }; 
+            name = discount; 
+            parameterDirection = 1; 
+            precision = 3; 
+            scale = 2; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }
+    ); 
+    externalName = APPLY_DISCOUNT; 
+    name = applyDiscount; 
+}

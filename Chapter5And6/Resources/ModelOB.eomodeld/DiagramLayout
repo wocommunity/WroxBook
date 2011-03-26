@@ -1,0 +1,14 @@
+{
+    Layouts = {
+        Default = {
+            EntityOption = All; 
+            RelationshipOption = Name; 
+            ViewPositions = {
+                Address = (0.000000, 25.000000, 147.000000, 150.000000); 
+                Category = (69.000000, 547.000000, 151.000000, 132.000000); 
+            }; 
+            orthoLines = Y; 
+        }; 
+    }; 
+    Version = 1; 
+}

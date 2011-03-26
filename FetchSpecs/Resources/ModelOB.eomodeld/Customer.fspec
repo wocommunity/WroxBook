@@ -1,0 +1,26 @@
+{
+    lastNameFetchSpec = {
+        class = EOFetchSpecification; 
+        entityName = Customer; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOKeyValueQualifier; 
+            key = lastName; 
+            selectorName = "isLike:"; 
+            value = {_key = lastNameValue; class = EOQualifierVariable; }; 
+        }; 
+        sortOrderings = (
+            {
+                class = EOSortOrdering; 
+                key = lastName; 
+                selectorName = "compareCaseInsensitiveAscending:"; 
+            }, 
+            {
+                class = EOSortOrdering; 
+                key = firstName; 
+                selectorName = "compareCaseInsensitiveAscending:"; 
+            }
+        ); 
+    }; 
+}

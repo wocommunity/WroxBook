@@ -1,0 +1,65 @@
+{
+    attributes = (
+        {
+            columnName = address; 
+            externalType = VARCHAR2; 
+            name = address; 
+            valueClassName = NSString; 
+            width = 75; 
+        }, 
+        {
+            columnName = addressID; 
+            externalType = number; 
+            name = addressID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = areaCode; 
+            externalType = VARCHAR2; 
+            name = areaCode; 
+            valueClassName = NSString; 
+            width = 15; 
+        }, 
+        {
+            columnName = city; 
+            externalType = VARCHAR2; 
+            name = city; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = country; 
+            externalType = VARCHAR2; 
+            name = country; 
+            valueClassName = NSString; 
+            width = 30; 
+        }, 
+        {
+            columnName = stateProvince; 
+            externalType = VARCHAR2; 
+            name = stateProvince; 
+            valueClassName = NSString; 
+            width = 20; 
+        }
+    ); 
+    attributesUsedForLocking = (addressID, address, city, stateProvince, areaCode, country); 
+    className = Address; 
+    classProperties = (address, city, stateProvince, areaCode, country, customers); 
+    externalName = tAddress; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (address, complement, city, stateProvince, areaCode, country, customer); 
+    }; 
+    name = Address; 
+    primaryKeyAttributes = (addressID); 
+    relationships = (
+        {
+            destination = Customer; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = addressID; sourceAttribute = addressID; }); 
+            name = customers; 
+        }
+    ); 
+}

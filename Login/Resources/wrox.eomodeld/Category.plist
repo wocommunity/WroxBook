@@ -1,0 +1,55 @@
+{
+    attributes = (
+        {
+            columnName = CATEGORYID; 
+            externalType = VARCHAR2; 
+            name = categoryid; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = PARENTID; 
+            externalType = VARCHAR2; 
+            name = parentid; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = THEDESCRIPTION; 
+            externalType = VARCHAR2; 
+            name = thedescription; 
+            valueClassName = NSString; 
+            width = 50; 
+        }
+    ); 
+    attributesUsedForLocking = (categoryid, parentid, thedescription); 
+    className = Category; 
+    classProperties = (parentid, thedescription, tcategory, tcategorys, titems); 
+    externalName = TCATEGORY; 
+    fetchSpecificationDictionary = {}; 
+    name = Category; 
+    primaryKeyAttributes = (categoryid); 
+    relationships = (
+        {
+            destination = Category; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryid; sourceAttribute = parentid; }); 
+            name = tcategory; 
+        }, 
+        {
+            destination = Category; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = parentid; sourceAttribute = categoryid; }); 
+            name = tcategorys; 
+        }, 
+        {
+            destination = Item; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryid; sourceAttribute = categoryid; }); 
+            name = titems; 
+        }
+    ); 
+}

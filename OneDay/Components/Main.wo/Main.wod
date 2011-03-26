@@ -1,0 +1,6 @@
+Applet: WOJavaClientApplet {
+    height = 512;
+    width = 512;
+    interfaceControllerClassName = "OneDay.client.OneDayInterfaceController";
+    useJavaPlugin = YES;
+}

@@ -1,0 +1,91 @@
+{
+    attributes = (
+        {
+            columnName = CATEGORYID; 
+            externalType = VARCHAR2; 
+            name = categoryid; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = ITEMID; 
+            externalType = NUMBER; 
+            name = itemid; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = QUANTITYINSTOCK; 
+            externalType = NUMBER; 
+            name = quantityinstock; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = RETAILPRICE; 
+            externalType = NUMBER; 
+            name = retailprice; 
+            precision = 14; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = STOREPRICE; 
+            externalType = NUMBER; 
+            name = storeprice; 
+            precision = 14; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = THEDESCRIPTION; 
+            externalType = VARCHAR2; 
+            name = thedescription; 
+            valueClassName = NSString; 
+            width = 200; 
+        }, 
+        {
+            columnName = TITLE; 
+            externalType = VARCHAR2; 
+            name = title; 
+            valueClassName = NSString; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        categoryid, 
+        itemid, 
+        quantityinstock, 
+        retailprice, 
+        storeprice, 
+        thedescription, 
+        title
+    ); 
+    className = Item; 
+    classProperties = (
+        categoryid, 
+        quantityinstock, 
+        retailprice, 
+        storeprice, 
+        thedescription, 
+        title, 
+        tcategory
+    ); 
+    externalName = TITEM; 
+    fetchSpecificationDictionary = {}; 
+    name = Item; 
+    primaryKeyAttributes = (itemid); 
+    relationships = (
+        {
+            destination = Category; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryid; sourceAttribute = categoryid; }); 
+            name = tcategory; 
+        }
+    ); 
+}

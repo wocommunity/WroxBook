@@ -1,0 +1,63 @@
+{
+    attributes = (
+        {
+            columnName = categoryID; 
+            externalType = char; 
+            name = categoryID; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = parentID; 
+            externalType = char; 
+            name = parentID; 
+            valueClassName = NSString; 
+            valueType = i; 
+            width = 20; 
+        }, 
+        {
+            columnName = theDescription; 
+            externalType = char; 
+            name = theDescription; 
+            valueClassName = NSString; 
+            width = 50; 
+        }
+    ); 
+    attributesUsedForLocking = (categoryID, parentID, theDescription); 
+    cachesObjects = Y; 
+    className = EOGenericRecord; 
+    classProperties = (theDescription, categoryID, parent, items, children); 
+    externalName = tCategory; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {_clientClassPropertyNames = (theDescription, categoryID, parent); }; 
+    isReadOnly = Y; 
+    name = Category; 
+    primaryKeyAttributes = (categoryID); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = Category; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = parentID; sourceAttribute = categoryID; }); 
+            name = children; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = Item; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryID; sourceAttribute = categoryID; }); 
+            name = items; 
+            numberOfToManyFaultsToBatchFetch = 5; 
+        }, 
+        {
+            destination = Category; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryID; sourceAttribute = parentID; }); 
+            name = parent; 
+        }
+    ); 
+}

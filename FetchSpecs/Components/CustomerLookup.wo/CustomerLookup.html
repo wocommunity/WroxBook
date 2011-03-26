@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <meta name = "generator" content = "WebObjects 5" />
+    <title>Look Up A Customer</title>
+  </head>
+  <body bgcolor = "#FFFFFF">
+    <center>
+      <webobject name = "Form1">
+        <p />Look up a Customer: 
+        <p>
+          <webobject name = "TextField1" />
+          &nbsp; 
+          <webobject name = "SubmitButton1" />
+        </p>
+        <hr />
+        <p />
+      </webobject>
+      <p />
+      <webobject name = "Conditional1">
+        <webobject name = "Form2">
+          <p>Sorry, no customers match that inquiry. &nbsp; </p>
+        </webobject>
+      </webobject>
+      <p />
+      <webobject name = "Conditional3">
+        <table cellspacing = "2" cellpadding = "2" border = "1" width = "480">
+          <tr>
+            <th>First&nbsp;Name</th>
+            <th>Last Name</th>
+            <td />
+          </tr>
+          <webobject name = "Repetition1">
+            <tr>
+              <td align = "CENTER"><webobject name = "String1" /></td>
+              <td align = "CENTER"><webobject name = "String2" /></td>
+              <td align = "CENTER">
+                <webobject name = "Hyperlink1">View 
+                  Details</webobject>
+              </td>
+            </tr>
+          </webobject>
+        </table>
+      </webobject>
+      <p />
+      <webobject name = "Conditional2">
+        <table cellspacing = "2" cellpadding = "2" border = "1" width = "320" align = "CENTER">
+          <tr>
+            <th colspan = "2">Customer Data</th>
+          </tr>
+          <tr>
+            <td>First Name</td>
+            <td><webobject name = "String3" /></td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td><webobject name = "String4" /></td>
+          </tr>
+          <tr>
+            <td>E-mail</td>
+            <td><webobject name = "String5" /></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <td><webobject name = "String6" /></td>
+          </tr>
+          <tr>
+            <td>State or Province</td>
+            <td><webobject name = "String7" /></td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td><webobject name = "String8" /></td>
+          </tr>
+        </table>
+      </webobject>
+      <p />
+    </center>
+  </body>
+</html>

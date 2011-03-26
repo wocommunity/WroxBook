@@ -1,0 +1,15 @@
+loginForm: LoginForm {
+}
+
+NOTisUserLoggedIn: WOConditional {
+  condition=session.isUserLoggedIn;
+  negate=true;
+}
+
+isUserLoggedIn: WOConditional {
+  condition=session.isUserLoggedIn;
+}
+
+parentContent: WOComponentContent {
+}
+

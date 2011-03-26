@@ -1,0 +1,66 @@
+{
+    attributes = (
+        {columnName = amount; name = amount; prototypeName = currency; }, 
+        {
+            columnName = creditCardExpiryDate; 
+            externalType = char; 
+            name = creditCardExpiryDate; 
+            valueClassName = NSString; 
+            width = 7; 
+        }, 
+        {
+            columnName = creditCardName; 
+            externalType = char; 
+            name = creditCardName; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = creditCardNumber; 
+            externalType = int; 
+            name = creditCardNumber; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = datePaid; 
+            externalType = date; 
+            name = datePaid; 
+            valueClassName = NSCalendarDate; 
+        }, 
+        {columnName = paymentID; name = paymentID; prototypeName = artificialKey; }, 
+        {
+            columnName = type; 
+            externalType = char; 
+            name = type; 
+            valueClassName = NSString; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        paymentID, 
+        amount, 
+        creditCardNumber, 
+        creditCardExpiryDate, 
+        type, 
+        creditCardName, 
+        datePaid
+    ); 
+    className = EOGenericRecord; 
+    classProperties = (
+        amount, 
+        creditCardNumber, 
+        creditCardExpiryDate, 
+        type, 
+        creditCardName, 
+        datePaid
+    ); 
+    externalName = tPayment; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        _clientClassPropertyNames = (amount, creditCardNumber, creditCardExpiryDate, type, creditCardName); 
+    }; 
+    name = Payment; 
+    primaryKeyAttributes = (paymentID); 
+}

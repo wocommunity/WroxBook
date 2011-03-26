@@ -1,0 +1,41 @@
+books : MenuElement {
+  area = "Books";
+}
+
+booksLink : WOHyperlink {
+  pageName = "BooksTop";
+}
+
+checkout : MenuElement {
+  area = "Checkout";
+}
+
+checkoutLink : WOHyperlink {
+  pageName = "Checkout";
+}
+
+electronics : MenuElement {
+  area = "Electronics";
+}
+
+electronicsLink : WOHyperlink {
+  pageName = "ElectronicsTop";
+}
+
+emptyCell : MenuElement {
+  area = "none";
+}
+
+menuTable : WOGenericContainer {
+  elementName = "TABLE";
+	height = 40;
+	width = 360;
+}
+
+music : MenuElement {
+  area = "Music";
+}
+
+musicLink : WOHyperlink {
+  pageName = "MusicTop";
+}

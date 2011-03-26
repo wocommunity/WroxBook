@@ -1,0 +1,78 @@
+{
+    attributes = (
+        {
+            columnName = AMOUNT; 
+            externalType = NUMBER; 
+            name = amount; 
+            precision = 14; 
+            scale = 2; 
+            valueClassName = NSDecimalNumber; 
+            valueType = B; 
+        }, 
+        {
+            columnName = CREDITCARDEXPIRYDATE; 
+            externalType = VARCHAR2; 
+            name = creditcardexpirydate; 
+            valueClassName = NSString; 
+            width = 7; 
+        }, 
+        {
+            columnName = CREDITCARDNAME; 
+            externalType = VARCHAR2; 
+            name = creditcardname; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = CREDITCARDNUMBER; 
+            externalType = VARCHAR2; 
+            name = creditcardnumber; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = DATEPAID; 
+            externalType = DATE; 
+            name = datepaid; 
+            valueClassName = NSCalendarDate; 
+        }, 
+        {
+            columnName = PAYMENTID; 
+            externalType = NUMBER; 
+            name = paymentid; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = TYPE; 
+            externalType = VARCHAR2; 
+            name = type; 
+            valueClassName = NSString; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        amount, 
+        creditcardexpirydate, 
+        creditcardname, 
+        creditcardnumber, 
+        datepaid, 
+        paymentid, 
+        type
+    ); 
+    className = Payment; 
+    classProperties = (
+        amount, 
+        creditcardexpirydate, 
+        creditcardname, 
+        creditcardnumber, 
+        datepaid, 
+        type
+    ); 
+    externalName = TPAYMENT; 
+    fetchSpecificationDictionary = {}; 
+    name = Payment; 
+    primaryKeyAttributes = (paymentid); 
+}

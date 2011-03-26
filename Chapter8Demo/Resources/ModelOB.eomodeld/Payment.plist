@@ -1,0 +1,80 @@
+{
+    attributes = (
+        {
+            columnName = amount; 
+            externalType = double; 
+            name = amount; 
+            precision = 38; 
+            scale = 2; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            columnName = creditCardExpiryDate; 
+            externalType = char; 
+            name = creditCardExpiryDate; 
+            valueClassName = NSString; 
+            width = 7; 
+        }, 
+        {
+            columnName = creditCardName; 
+            externalType = char; 
+            name = creditCardName; 
+            valueClassName = NSString; 
+            width = 40; 
+        }, 
+        {
+            columnName = creditCardNumber; 
+            externalType = char; 
+            name = creditCardNumber; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = datePaid; 
+            externalType = date; 
+            name = datePaid; 
+            valueClassName = NSCalendarDate; 
+        }, 
+        {
+            columnName = paymentID; 
+            externalType = int; 
+            name = paymentID; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = type; 
+            externalType = char; 
+            name = type; 
+            valueClassName = NSString; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        paymentID, 
+        amount, 
+        creditCardNumber, 
+        creditCardExpiryDate, 
+        type, 
+        creditCardName, 
+        datePaid
+    ); 
+    className = Payment; 
+    classProperties = (
+        amount, 
+        creditCardNumber, 
+        creditCardExpiryDate, 
+        type, 
+        creditCardName, 
+        datePaid
+    ); 
+    externalName = tPayment; 
+    fetchSpecificationDictionary = {}; 
+    internalInfo = {
+        "_clientClassPropertyNames" = (amount, creditCardNumber, creditCardExpiryDate, type, creditCardName); 
+    }; 
+    name = Payment; 
+    primaryKeyAttributes = (paymentID); 
+}

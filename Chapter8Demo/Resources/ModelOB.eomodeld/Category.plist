@@ -1,0 +1,63 @@
+{
+    attributes = (
+        {
+            columnName = categoryID; 
+            externalType = char; 
+            name = categoryID; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = parentID; 
+            externalType = char; 
+            name = parentID; 
+            valueClassName = NSString; 
+            valueType = i; 
+            width = 20; 
+        }, 
+        {
+            columnName = description; 
+            externalType = char; 
+            name = theDescription; 
+            valueClassName = NSString; 
+            width = 50; 
+        }
+    ); 
+    cachesObjects = Y; 
+    className = Category; 
+    classProperties = (theDescription, categoryID, parent, items, children); 
+    externalName = tCategory; 
+    internalInfo = {"_clientClassPropertyNames" = (theDescription, categoryID, parent); }; 
+    isReadOnly = Y; 
+    maxNumberOfInstancesToBatchFetch = 3; 
+    name = Category; 
+    primaryKeyAttributes = (categoryID); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = Category; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = parentID; sourceAttribute = categoryID; }); 
+            name = children; 
+            ownsDestination = Y; 
+        }, 
+        {
+            deleteRule = EODeleteRuleCascade; 
+            destination = Item; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryID; sourceAttribute = categoryID; }); 
+            name = items; 
+        }, 
+        {
+            destination = Category; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryID; sourceAttribute = parentID; }); 
+            name = parent; 
+        }
+    ); 
+    sharedObjectFetchSpecificationNames = (FetchSpec); 
+}

@@ -1,0 +1,67 @@
+{
+    genericFetchSpec = {
+        class = EOFetchSpecification; 
+        entityName = Customer; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = email; 
+                    selectorName = "isLike:"; 
+                    value = {_key = eMail; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = firstName; 
+                    selectorName = "isLike:"; 
+                    value = {_key = firstName; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = lastName; 
+                    selectorName = "isLike:"; 
+                    value = {_key = lastName; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = address.city; 
+                    selectorName = "isLike:"; 
+                    value = {_key = city; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = address.country; 
+                    selectorName = "isLike:"; 
+                    value = {_key = country; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+    }; 
+    lastNameFetchSpec = {
+        class = EOFetchSpecification; 
+        entityName = Customer; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+        qualifier = {
+            class = EOKeyValueQualifier; 
+            key = lastName; 
+            selectorName = "isLike:"; 
+            value = {_key = lastNameValue; class = EOQualifierVariable; }; 
+        }; 
+        sortOrderings = (
+            {
+                class = EOSortOrdering; 
+                key = lastName; 
+                selectorName = "compareCaseInsensitiveAscending:"; 
+            }, 
+            {
+                class = EOSortOrdering; 
+                key = firstName; 
+                selectorName = "compareCaseInsensitiveAscending:"; 
+            }
+        ); 
+    }; 
+}

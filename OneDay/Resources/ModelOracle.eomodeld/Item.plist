@@ -1,0 +1,79 @@
+{
+    attributes = (
+        {
+            columnName = categoryID; 
+            externalType = VARCHAR2; 
+            name = categoryID; 
+            valueClassName = NSString; 
+            width = 20; 
+        }, 
+        {
+            columnName = itemID; 
+            externalType = number; 
+            name = itemID; 
+            valueClassName = NSDecimalNumber; 
+        }, 
+        {
+            columnName = quantityInStock; 
+            externalType = NUMBER; 
+            name = quantityInStock; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = retailPrice; 
+            externalType = number; 
+            name = retailPrice; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = storePrice; 
+            externalType = number; 
+            name = storePrice; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = theDescription; 
+            externalType = VARCHAR2; 
+            name = theDescription; 
+            valueClassName = NSString; 
+            width = 200; 
+        }, 
+        {
+            columnName = title; 
+            externalType = VARCHAR2; 
+            name = title; 
+            valueClassName = NSString; 
+            width = 40; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        categoryID, 
+        itemID, 
+        quantityInStock, 
+        retailPrice, 
+        storePrice, 
+        theDescription, 
+        title
+    ); 
+    className = Item; 
+    classProperties = (title, theDescription, retailPrice, storePrice, quantityInStock, category); 
+    externalName = tItem; 
+    internalInfo = {
+        _clientClassPropertyNames = (title, theDescription, retailPrice, storePrice, quantityInStock, category); 
+    }; 
+    name = Item; 
+    primaryKeyAttributes = (itemID); 
+    relationships = (
+        {
+            destination = Category; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = categoryID; sourceAttribute = categoryID; }); 
+            name = category; 
+        }
+    ); 
+}

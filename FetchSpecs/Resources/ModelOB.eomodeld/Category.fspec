@@ -1,0 +1,8 @@
+{
+    FetchSpec = {
+        class = EOFetchSpecification; 
+        entityName = Category; 
+        fetchLimit = 0; 
+        isDeep = YES; 
+    }; 
+}

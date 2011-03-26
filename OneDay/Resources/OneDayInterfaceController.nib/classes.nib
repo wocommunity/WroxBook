@@ -1,0 +1,11 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = OneDay.client.OneDayInterfaceController; 
+            LANGUAGE = Java; 
+            SUPERCLASS = com.webobjects.eoapplication.EOInterfaceController; 
+        }
+    ); 
+    IBVersion = 1; 
+}

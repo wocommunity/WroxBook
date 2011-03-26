@@ -1,0 +1,57 @@
+{
+    attributes = (
+        {
+            columnName = CUSTOMERID; 
+            externalType = NUMBER; 
+            name = customerid; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = ORDERID; 
+            externalType = NUMBER; 
+            name = orderid; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = PAYMENTID; 
+            externalType = NUMBER; 
+            name = paymentid; 
+            precision = 22; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = THEDATE; 
+            externalType = DATE; 
+            name = thedate; 
+            valueClassName = NSCalendarDate; 
+        }
+    ); 
+    attributesUsedForLocking = (customerid, orderid, paymentid, thedate); 
+    className = Order; 
+    classProperties = (customerid, paymentid, thedate, tcustomer, tlineitems); 
+    externalName = TORDER; 
+    fetchSpecificationDictionary = {}; 
+    name = Order; 
+    primaryKeyAttributes = (orderid); 
+    relationships = (
+        {
+            destination = Customer; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = customerid; sourceAttribute = customerid; }); 
+            name = tcustomer; 
+        }, 
+        {
+            destination = Lineitem; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = orderid; sourceAttribute = orderid; }); 
+            name = tlineitems; 
+        }
+    ); 
+}
